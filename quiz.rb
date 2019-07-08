@@ -28,4 +28,4 @@ questions.shuffle.each do |question|
   puts
 end
 
-puts "#{correct} / #{asked}"
+puts "#{correct} / #{asked} = #{(correct / asked.to_f).round(3)}"

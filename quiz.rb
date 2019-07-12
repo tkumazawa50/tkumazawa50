@@ -4,6 +4,14 @@ Question = Struct.new(:question, :a1, :a2, :a3, :a4, :a5, :answer, :times, :subj
 
 questions = CSV.read('data.csv').map { |q| Question.new(*q) }
 
+subjects = questions.map(&:subject).uniq
+puts 'Select subject?', *subjects.map.with_index { |s, i| "#{i}): #{s}" }
+print '> '
+subject = gets.chomp
+if subject&.match(/\A\d+\z/)
+  questions.select! { |q| q.subject == subjects[subject.to_i - 1] }
+end
+
 asked = 0
 correct = 0
 

@@ -11,12 +11,13 @@ subject = gets.chomp
 if subject&.match(/\A\d+\z/)
   questions.select! { |q| q.subject == subjects[subject.to_i - 1] }
 end
+puts
 
 asked = 0
 correct = 0
 
-questions.shuffle.each do |question|
-  puts "#{question.times} #{question.subject} 問#{question.number}"
+questions.shuffle.each.with_index(1) do |question, index|
+  puts "#{index} #{question.times} #{question.subject} 問#{question.number}"
   puts question.question
   puts question.additional if question.additional
   puts "Image" if question.image

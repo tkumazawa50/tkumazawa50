@@ -12,6 +12,8 @@ cd air-temp
 ruby quiz.rb
 ```
 
+<img src="https://raw.githubusercontent.com/wktk/wktk.jp/763ab260faf4b519d624b997ea1d24a7d7c0775f/content/blog/2019-11-09/quiz.gif" width="380">
+
 ## CSV の形式について
 
 ```

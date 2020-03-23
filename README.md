@@ -2,6 +2,8 @@
 
 [WIP] 航空従事者学科試験 (航空通信士) の過去問を出題する
 
+see also: https://wktk.jp/entry/flight-radio-operator/
+
 ## 使用方法
 
 ```sh
